@@ -1,0 +1,205 @@
+:root {
+  --color-fondo: #f4f4f4;
+  --color-principal: #005f99;
+  --color-secundario: #ff9800;
+  --color-texto: #333;
+  --espaciado: 10px;
+  --radio-borde: 8px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  margin: 0;
+  padding: 0;
+}
+/* Menu */
+header {
+  background-color: var(--color-principal);
+  color: white;
+  padding: 10px 0;
+  border-bottom: 5px solid var(--color-secundario);
+}
+header h1, header p {
+  text-align: center;
+  margin: 5px 0;
+}
+
+nav ul {
+  display: flex;        
+  justify-content: center;   
+  align-items: center;
+  list-style: none;   
+  padding: 0;
+  margin: 10px 0;
+  gap: 30px;      
+}
+
+nav li {
+  margin: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: var(--color-secundario);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/*SECCIONES*/
+section {
+  padding: 20px;
+  margin: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: var(--radio-borde);
+}
+
+/* Listas */
+ul {
+  list-style-type: square;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+/*PIE DE PÁGINA */
+footer {
+  text-align: center;
+  background-color: var(--color-principal);
+  color: white;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+
+/*FUNCIONES Y HACKS CSS*/
+
+main {
+  width: calc(100% - 40px);
+}
+
+/* Hack */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  body {
+    background-color: #e0e0e0;
+  }
+}
+
+h1, h2 {
+  color: #1a73e8;
+  text-align: center;
+}
+
+p {
+  text-align: justify;
+}
+
+/* === Figura con SVG === */
+.svg-demo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto;
+}
+
+svg {
+  width: 80%;
+  max-width: 400px;
+  height: auto;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.svg-box {
+  fill: #e3f2fd;
+  stroke: #1a73e8;
+  stroke-width: 2;
+}
+
+.svg-circle {
+  fill: #fce4ec;
+  stroke: #d81b60;
+  stroke-width: 2;
+}
+
+.svg-text {
+  font-size: 16px;
+  font-weight: bold;
+  fill: #333;
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* === Tabla estilizada === */
+.styled-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.styled-table th, .styled-table td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.styled-table thead {
+  background-color: #1a73e8;
+  color: #fff;
+}
+
+.styled-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.styled-table tr:hover {
+  background-color: #e3f2fd;
+}
+
+/* === Pie de página === */
+.site-footer {
+  background-color: #1a73e8;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 3rem;
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* === Responsive === */
+@media (max-width: 600px) {
+  svg {
+    width: 100%;
+  }
+
+  h1, h2 {
+    font-size: 1.4rem;
+  }
+
+  p, td, th {
+    font-size: 0.9rem;
+  }
+}
