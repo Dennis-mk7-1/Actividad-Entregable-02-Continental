@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto Responsive</title>
+  <!-- Vinculación del CSS externo -->
+  <link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+<main>
+  <article class="about-article">
+    <h1>Sobre este proyecto</h1>
+    <p>
+      Este sitio de ejemplo muestra técnicas modernas para crear experiencias responsivas usando HTML5 y CSS3. 
+      A continuación incluimos un SVG modificado inline para demostrar manipulación y accesibilidad.
+    </p>
+
+    <figure class="svg-demo">
+      <!-- SVG propio (inline con imágenes internas) -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 120" role="img" aria-labelledby="svgTitle svgDesc">
+        <title id="svgTitle">Gráfico representativo</title>
+        <desc id="svgDesc">Un SVG simple que contiene imágenes dentro de formas.</desc>
+
+        <!-- Cuadro con imagen -->
+        <rect x="10" y="10" width="120" height="100" class="svg-box" />
+        <clipPath id="clipSquare">
+          <rect x="10" y="10" width="120" height="100" />
+        </clipPath>
+        <image href="img/meow.PNG" x="10" y="10" width="120" height="100" clip-path="url(#clipSquare)" />
+
+        <!-- Círculo con imagen -->
+        <circle cx="220" cy="60" r="45" class="svg-circle" />
+        <clipPath id="clipCircle">
+          <circle cx="220" cy="60" r="45" />
+        </clipPath>
+        <image href="img/img02.webp" x="175" y="15" width="90" height="90" clip-path="url(#clipCircle)" />
+
+        <!-- Texto -->
+        <text x="20" y="65" class="svg-text">Responsive</text>
+      </svg>
+      <figcaption>SVG inline con imágenes dentro de figuras geométricas.</figcaption>
+    </figure>
+
+    <h2>Tabla de comparación</h2>
+    <table class="styled-table" summary="Comparación de técnicas">
+      <thead>
+        <tr>
+          <th>Técnica</th>
+          <th>Ventaja</th>
+          <th>Consideración</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Mobile-first</td>
+          <td>Prioriza experiencia móvil</td>
+          <td>Requiere planificación de contenido</td>
+        </tr>
+        <tr>
+          <td>&lt;picture&gt; + srcset</td>
+          <td>Mejor rendimiento</td>
+          <td>Preparar múltiples recursos</td>
+        </tr>
+        <tr>
+          <td>SVG inline</td>
+          <td>Escalable y accesible</td>
+          <td>Puede requerir edición para animaciones</td>
+        </tr>
+      </tbody>
+    </table>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <p><a href="index.html">Volver al inicio</a></p>
+  <div class="container"><p>&copy; 2025 - Proyecto Responsive</p></div>
+</footer>
+</body>
+</html>
